@@ -19,13 +19,6 @@ def c_to_f(c_temp):
   f_temp = c_temp * (9/5) + 32
   return f_temp 
 
-f100_in_celsius = f_to_c(100)
-c0_in_fahrenheit = c_to_f(0)
-print(f100_in_celsius)
-print(c0_in_fahrenheit)
-
-print('---------------------------------------------')
-
 # Use the Force
 def get_force(mass, acceleration):
   """
@@ -41,14 +34,17 @@ def get_energy(mass, c = 3*10**8):
   """
   return mass * c ** 2
 
-print('----------------------------------------------')
-
 # Do the Work
 def get_work(mass, acceleration, distance):
   """
   Work is defined as force multiplied by distance. First, get the force using get_force, then multiply that by distance.
   """
   return get_force(mass, acceleration) * distance
+
+f100_in_celsius = f_to_c(100)
+c0_in_fahrenheit = c_to_f(0)
+print(f100_in_celsius)
+print(c0_in_fahrenheit)
 
 train_force = get_force(train_mass, train_acceleration)
 print('The GE train supplies {} Newtons of force.'.format(train_force))
